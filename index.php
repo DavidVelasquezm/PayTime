@@ -144,7 +144,8 @@ if ($Susuario == TRUE){
     <div class="span6">
       <h3>Agrega el costo por hora</h3>
       <form name="valor">
-        <b>Cronometro: </b><input type=text value="" disabled name="total" size=8>
+        <b>Costo por Hora: </b><input type=text value="10000"  name="costo" size=8>
+        <br><b>Total: </b><input type=text value="" disabled name="total" size=8>
       </form>
       <button class="btn" onclick="multiplicar()">ver valor</button>
     </div>
