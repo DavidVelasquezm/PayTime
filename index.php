@@ -15,7 +15,7 @@
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <!-- Bootstrap -->
   </head>
-<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#FF0000" VLINK="#000080" ALINK="#000080" onLoad="cronometro()">
+<body BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#FF0000" VLINK="#000080" ALINK="#000080" onLoad="cronometro()">
 <?php
 $Susuario = $_SESSION['usuario'];
 $SHoras = $_SESSION['Horas'];
@@ -24,6 +24,28 @@ $SSegundos = $_SESSION['Segundos'];
 if ($Susuario == TRUE){
 ?>
 <script language="JavaScript">
+ 
+    var valor = 10000
+
+    function multiplicar() {
+    
+      vhoras = valor*horag
+    
+      vminutos = (valor*minutog)/60
+    
+      vsegundos = (valor*segundog)/3200
+    
+      total = vhoras+vminutos+vsegundos
+
+      document.valor.total.value=total
+    
+      console.log(total)
+    }
+
+
+
+
+
     var hora = "0"
     var minuto = "00"
     var segundo = "0"
@@ -119,6 +141,10 @@ if ($Susuario == TRUE){
     
     <div class="span6">
       <h3>Agrega el costo por hora</h3>
+      <form name="valor">
+        <b>Cronometro: </b><input type=text value="" name="total" size=8>
+      </form>
+      <button onclick="multiplicar()">ver valor</button>
     </div>
 
 </div>
