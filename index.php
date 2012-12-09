@@ -115,7 +115,7 @@ if ($Susuario == TRUE){
 <div class="row-fluid">
     <div class="span5">
       <form name="cronometro">
-        <b>Cronometro: </b><input type=text value="" name="gratisss" size=8>
+        <b>Cronometro: </b><input type=text value="" disabled name="gratisss" size=8>
       </form>
       
       <button onclick="tiempo()">
@@ -124,7 +124,7 @@ if ($Susuario == TRUE){
       <br>
       <h3>tiempo acumulado</h3>
       <form name="tablatiempo">
-        <b>Total:</b> <input type=text name="ttotal" size=8 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
+        <b>Total:</b> <input type=text name="ttotal" disabled size=8 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
       </form>
       <button class="btn btn-inverse pull-center" type="submit" id="btlof" name="login" value="Logout">
         Log Out
@@ -142,7 +142,7 @@ if ($Susuario == TRUE){
     <div class="span6">
       <h3>Agrega el costo por hora</h3>
       <form name="valor">
-        <b>Cronometro: </b><input type=text value="" name="total" size=8>
+        <b>Cronometro: </b><input type=text value="" disabled name="total" size=8>
       </form>
       <button onclick="multiplicar()">ver valor</button>
     </div>
