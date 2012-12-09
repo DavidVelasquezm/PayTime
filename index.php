@@ -100,6 +100,7 @@ window.setTimeout("cronometro()",1000)
 <form name="tablatiempo">
 <b>Total:</b> <input type=text name="ttotal" size=8 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
 </form>
+<button class="btn btn-inverse pull-center" type="submit" id="btlof" name="login" value="LogOut">Log Out</button>
 <?php
 }
 else {
