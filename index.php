@@ -14,8 +14,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <!-- Bootstrap -->
-  </head>
-<body onLoad="cronometro()">
+
 <?php
 $Susuario = $_SESSION['usuario'];
 $SHoras = $_SESSION['Horas'];
@@ -110,16 +109,19 @@ if ($Susuario == TRUE){
     }
     
 </script>
+</head>
+<body onLoad="cronometro()">
 
-<center></center>
+<div class="container">
 <div class="row-fluid">
     <div class="span5">
+      <h3>Tiempo sin Guardar</h3>
       <form name="cronometro">
         <b>Cronometro: </b><input type=text value="" disabled name="gratisss" size=8>
       </form>
       
-      <button onclick="tiempo()">
-        guardar
+      <button class="btn" onclick="tiempo()">
+        Guardar
       </button>
       <br>
       <h3>tiempo acumulado</h3>
@@ -144,11 +146,11 @@ if ($Susuario == TRUE){
       <form name="valor">
         <b>Cronometro: </b><input type=text value="" disabled name="total" size=8>
       </form>
-      <button onclick="multiplicar()">ver valor</button>
+      <button class="btn" onclick="multiplicar()">ver valor</button>
     </div>
 
 </div>
-
+</div>
 
 
  
