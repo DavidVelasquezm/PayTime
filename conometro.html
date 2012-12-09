@@ -1,0 +1,65 @@
+<script language="JavaScript">
+<!-- Oculto para browser antiguos
+// Recursos WebMaster
+// http://www.yomaster.com
+
+var hora = "0"
+var minuto = "00"
+var segundo = "0"
+
+var horag = "0"
+var minutog = "0"
+var segundog = "0"
+
+function tiempo(){
+
+	horag = parseInt(horag) + parseInt(hora)
+	minutog = parseInt(minutog) + parseInt(minuto)
+	segundog = parseInt(segundog) + (parseInt(segundo) - parseInt(1) )
+	console.log(segundog)
+	document.tablatiempo.ttotal.value=horag + ":" + minutog + ":" + segundog
+	document.cronometro.gratisss.value = "0" + ":" + "00" + ":" + "00"
+	hora = "0"
+	minuto = "00"
+	segundo = "0"
+}
+
+
+function cronometro(){
+
+if ((minuto < 10) && (minuto != "00")){
+bajamin = "0" + minuto
+}
+else{
+bajamin = minuto
+}
+bajasec = (segundo < 10) ? segundo = "0" + segundo : segundo
+document.cronometro.gratisss.value = hora + ":" + bajamin + ":" + bajasec
+if (segundo < 59){
+segundo++
+}
+else{
+segundo = "0"
+minuto++
+if (minuto > 59){
+minuto = "00"
+hora++
+}
+}
+window.setTimeout("cronometro()",1000) 
+}
+// -->
+</SCRIPT>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#FF0000" VLINK="#000080" ALINK="#000080" onLoad="cronometro()">
+<center></center>
+
+<form name="cronometro">
+<b>Cronometro: </b><input type=text value="" name="gratisss" size=8>
+
+</form><button onclick="tiempo()">guardar</button>
+<br>
+<h3>tiempo acumulado</h3>
+<form name="tablatiempo">
+<b>Total:</b> <input type=text value="" name="ttotal" size=8>
+</form>
+
