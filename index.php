@@ -15,7 +15,7 @@
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <!-- Bootstrap -->
   </head>
-<body BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#FF0000" VLINK="#000080" ALINK="#000080" onLoad="cronometro()">
+<body onLoad="cronometro()">
 <?php
 $Susuario = $_SESSION['usuario'];
 $SHoras = $_SESSION['Horas'];
@@ -113,7 +113,7 @@ if ($Susuario == TRUE){
 
 <center></center>
 <div class="row-fluid">
-    <div class="span6">
+    <div class="span5">
       <form name="cronometro">
         <b>Cronometro: </b><input type=text value="" name="gratisss" size=8>
       </form>
