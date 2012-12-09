@@ -16,4 +16,5 @@
 					| <span class="link_reg"><a href="#register">Register</a></span> |
 					<span class="link_reg"><a href="#pass_form">Forgot password?</a></span>
 				</div>  
+</div>
 

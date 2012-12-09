@@ -111,7 +111,7 @@ if ($Susuario == TRUE){
 </script>
 </head>
 <body onLoad="cronometro()">
-
+<div id="login_div">
 <div class="container">
 <div class="row-fluid">
     <div class="span5">
@@ -128,18 +128,9 @@ if ($Susuario == TRUE){
       <form name="tablatiempo">
         <b>Total:</b> <input type=text name="ttotal" disabled size=8 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
       </form>
-      <button class="btn btn-inverse pull-center" type="submit" id="btlof" name="login" value="Logout">
+      <button class="btn btn-inverse pull-center" type="submit" id="btloff" name="login" value="Logout">
         Log Out
       </button>
-      <?php
-        }
-        else {
-        echo "<br><br><br><div class=\"well\" align=\"center\" id=\"login_div\">";
-        include('f_log.php');
-        echo "</div>";
-        }
-      ?> 
-    </div>
     
     <div class="span6">
       <h3>Agrega el costo por hora</h3>
@@ -152,6 +143,17 @@ if ($Susuario == TRUE){
 
 </div>
 </div>
+    </div>
+      <?php
+        }
+        else {
+        echo "<br><br><br><div class=\"well\" align=\"center\" id=\"login_div\">";
+        include('f_log.php');
+        echo "</div>";
+        }
+      ?> 
+
+
 
 
  
