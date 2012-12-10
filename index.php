@@ -142,9 +142,7 @@ die();
       <form name="tablatiempo">
         <b>Total:</b> <input class="fontsi" type=text name="ttotal" disabled size=5 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
       </form>
-      <button class="btn btn-inverse pull-center" type="submit" id="btloff" name="login" value="Logout">
-        Log Out
-      </button>
+      
     </div>
     
     <div class="span6">
@@ -156,7 +154,9 @@ die();
       <button class="btn" onclick="multiplicar()">ver valor</button>
     </div>
 
-</div>
+</div><button class="btn btn-inverse pull-center" type="submit" id="btloff" name="login" value="Logout">
+        Log Out
+      </button>
 </div>
     </div>
       <?php
