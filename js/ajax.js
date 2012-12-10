@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    /* Registro de usuarios */
+    /* Login de Usuarios */
     $("#btsub").click(function(){
         $("#login_div").slideUp();
         setTimeout(function(){
@@ -75,6 +75,35 @@ $(document).ready(function() {
             {
 		alert("Guardado con exito.");
                clearQueue();
+            }
+            //-------------------------------------
+            });
+        }, 500)
+    });
+
+    /* Registro de usuarios */
+    $("#regbtn").click(function(){
+        $("#login_div").slideUp();
+        setTimeout(function(){
+            $.post("cores/reg_gen.php", { da1: $("#email").val(), da2: $("#password").val(), da3: $("#nombre").val() },
+            function(data){
+            //-------*******************************
+            if(data!=='ok')
+            {
+               $("#login_div").html(data);
+               $("#login_div").slideDown();
+		setTimeout(function(){
+		$("#login_div").slideUp();
+		$("#login_div").load('register.php');
+		$("#login_div").slideDown();
+		}, 3000)
+               clearQueue();
+            }
+            else
+            {
+                $("#login_div").html("<span style='color:#05A62D;'>Se a enviado un email a tu casilla de correo<br>Sigue los pasos para activar tu cuenta.</span>");
+                $("#login_div").slideDown();
+                clearQueue();
             }
             //-------------------------------------
             });
