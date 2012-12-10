@@ -7,9 +7,9 @@ $vusuario = $_SESSION['usuario'];
 
 if($vusuario == TRUE){
 $host="localhost";
-$usuario="paytime";
-$contra="gu5asa8a8";
-$db="zadmin_paytime";
+$usuario="usuario";
+$contra="contraseña";
+$db="db";
 $conn=mysql_connect($host,$usuario,$contra);
 mysql_select_db("$db",$conn);
 
