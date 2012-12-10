@@ -78,6 +78,9 @@ if ($Susuario == TRUE){
     	console.log(segundog)
     	document.tablatiempo.ttotal.value=horag + ":" + minutog + ":" + segundog
     	document.cronometro.gratisss.value = "0" + ":" + "00" + ":" + "00"
+	document.getElementById('rhora').value = horag
+	document.getElementById('rmin').value = minutog
+	document.getElementById('rsec').value = segundog
     	hora = "0"
     	minuto = "00"
     	segundo = "0"
@@ -119,8 +122,11 @@ if ($Susuario == TRUE){
       <form name="cronometro">
         <b>Cronometro: </b><input type=text value="" disabled name="gratisss" size=8>
       </form>
-      
-      <button class="btn" onclick="tiempo()">
+<input type="hidden" value="" disabled name="rhora" id="rhora" size=8>
+<input type="hidden" value="" disabled name="rmin" id="rmin" size=8>
+<input type="hidden" value="" disabled name="rsec" id="rsec" size=8>
+
+      <button class="btn" id="save" name="save" onclick="tiempo()">
         Guardar
       </button>
       <br>

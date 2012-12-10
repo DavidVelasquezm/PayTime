@@ -14,6 +14,7 @@ $(document).ready(function() {
 		$("#login_div").slideUp();
 		$("#login_div").load('f_log.php');
 		$("#login_div").slideDown();
+		document.location.href = document.location.href;
 		}, 3000)
                clearQueue();
             }
@@ -58,6 +59,22 @@ $(document).ready(function() {
 		}, 3000)
 		document.location.href = document.location.href;
                 clearQueue();
+            }
+            //-------------------------------------
+            });
+        }, 500)
+    });
+
+    /* Guardar Valores... */
+    $("#save").click(function(){
+        setTimeout(function(){
+            $.post("cores/guardar.php", { da1: $("#rhora").val(), da2: $("#rmin").val(), da3: $("#rsec").val() },
+            function(data){
+            //-------*******************************
+            if(data!=='ok')
+            {
+		alert("Guardado con exito.");
+               clearQueue();
             }
             //-------------------------------------
             });
