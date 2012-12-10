@@ -13,6 +13,7 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/custom.css" rel="stylesheet" media="screen">
     <!-- Bootstrap -->
 
 <?php
@@ -120,11 +121,11 @@ if ($Susuario == TRUE){
     <div class="span5">
       <h3>Tiempo sin Guardar</h3>
       <form name="cronometro">
-        <b>Cronometro: </b><input type=text value="" disabled name="gratisss" size=8>
+        <b>Cronometro: </b><input class="fontsi" type=text value="" disabled name="gratisss" size=5>
       </form>
-<input type="hidden" value="" disabled name="rhora" id="rhora" size=8>
-<input type="hidden" value="" disabled name="rmin" id="rmin" size=8>
-<input type="hidden" value="" disabled name="rsec" id="rsec" size=8>
+<input class="fontsi" type="hidden" value="" disabled name="rhora" id="rhora" size=5>
+<input class="fontsi" type="hidden" value="" disabled name="rmin" id="rmin" size=5>
+<input class="fontsi" type="hidden" value="" disabled name="rsec" id="rsec" size=5>
 
       <button class="btn" id="save" name="save" onclick="tiempo()">
         Guardar
@@ -132,17 +133,18 @@ if ($Susuario == TRUE){
       <br>
       <h3>tiempo acumulado</h3>
       <form name="tablatiempo">
-        <b>Total:</b> <input type=text name="ttotal" disabled size=8 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
+        <b>Total:</b> <input class="fontsi" type=text name="ttotal" disabled size=5 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
       </form>
       <button class="btn btn-inverse pull-center" type="submit" id="btloff" name="login" value="Logout">
         Log Out
       </button>
+    </div>
     
     <div class="span6">
       <h3>Agrega el costo por hora</h3>
       <form name="valor">
-        <b>Costo por Hora: </b><input type=text value="10000"  name="costo" size=8>
-        <br><b>Total: </b><input type=text value="" disabled name="total" size=8>
+        <b>Costo por Hora: </b><input class="fontsi" type=text value="10000"  name="costo" size=5>
+        <br><b>Total: </b><input class="fontsi" type=text value="" disabled name="total" size=5>
       </form>
       <button class="btn" onclick="multiplicar()">ver valor</button>
     </div>
