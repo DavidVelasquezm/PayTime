@@ -5,9 +5,9 @@ $vlb = $_GET['id'];
 IF( $vla == TRUE && $vlb == TRUE){
 
 $host="localhost";
-$usuario="paytime";
-$contra="gu5asa8a8";
-$db="zadmin_paytime";
+$usuario="usuario";
+$contra="contraseÃ±a";
+$db="db";
 $conn=mysql_connect($host,$usuario,$contra);
 mysql_select_db("$db",$conn);
 
@@ -35,7 +35,7 @@ $vname = $_POST['da3'];
 if( $vusuario == FALSE || $vpass == FALSE || $vname == FALSE )
 {
 //Imprimo E1 que es = Campos Vacios :)
-echo '<span class="errrorr">Error: <strong>No puedes Ingresar dejando campos vaciós..</strong></span>';
+echo '<span class="errrorr">Error: <strong>No puedes Ingresar dejando campos vaciï¿½s..</strong></span>';
 die();
 }
 
