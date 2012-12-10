@@ -21,9 +21,10 @@ $Susuario = $_SESSION['usuario'];
 $SHoras = $_SESSION['Horas'];
 $SMinutos = $_SESSION['Minutos'];
 $SSegundos = $_SESSION['Segundos'];
+$activado = $_SESSION['Activado'];
 if ($Susuario == TRUE){
 
-if($activado == '0'){
+if($activado != "Activado"){
 echo "Aun no esta activa tu cuenta, verifica tu email para validarla!";
 echo "<a href=\"cores/core_out.php\">Log Out</a>";
 die();

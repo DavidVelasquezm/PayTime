@@ -58,9 +58,11 @@ $_SESSION['Horas']=$avv['1'];
 $_SESSION['Minutos']=$avv['2'];
 $_SESSION['Segundos']=$avv['3'];
 }
-$kk=mysql_query("SELECT Activado FROM login WHERE Login='".$vusuario."'");
-$_SESSION['Activado']=$kk;
-
+$kk=mysql_query("SELECT * FROM login WHERE Login='".$vusuario."' AND Activado='1'");
+$existencia = mysql_num_rows($kk);
+if($existencia != 0){ 
+$_SESSION['Activado']="Activado";
+}
 mysql_close();
 echo "ok";
 ?>
