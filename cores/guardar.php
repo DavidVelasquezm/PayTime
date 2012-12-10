@@ -16,6 +16,10 @@ mysql_select_db("$db",$conn);
 $guardar="UPDATE Tiempos SET Horas='".$horas."', Min='".$minutos."', Secs='".$segundos."' WHERE Usuario='".$vusuario."'";
 mysql_query($guardar, $conn);
 mysql_close();
-echo "$horas:$minutos:$segundos";
+
+// Seteo nuevamente las variables de Session, que se utilizan al logear / recargar la pagina con respectiva sesion de usuario.
+$_SESSION['Horas']=$horas;
+$_SESSION['Minutos']=$minutos;
+$_SESSION['Segundos']=$segundos;
 }
 ?>
