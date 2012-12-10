@@ -70,6 +70,9 @@ die();
 $query="INSERT into login (Login,Password,RegKey,Nombre,Activado) VALUES ('".$vusuario."','".$vpass."','".$cad."','".$vname."','0')";
 mysql_query($query,$conn);
 
+$query="INSERT into Tiempos (Usuario,Horas,Min,Secs) VALUES ('".$vusuario."',0,0,0)";
+mysql_query($query,$conn);
+
  // Empiezo a generar el mail...
 	$codigohtml = "<html><head><title>Registro Paytime</title></head><body>Gracias por registrarte a Paytime.<br> sigue este link para activar tu cuenta: http://ligool.com/paytime/cores/reg_gen.php?key=$cad&id=$vusuario <br> ";
 	$email = $vusuario;
