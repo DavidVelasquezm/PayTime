@@ -1,4 +1,4 @@
-     				<div class="cnt_b">
+     				<div class="cnt_b" id="loginfix">
 					<div class="formRow" align="center">
 						<div class="input-prepend">
 							<span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Username" />
