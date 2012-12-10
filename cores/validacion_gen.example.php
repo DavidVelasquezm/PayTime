@@ -58,5 +58,9 @@ $_SESSION['Horas']=$avv['1'];
 $_SESSION['Minutos']=$avv['2'];
 $_SESSION['Segundos']=$avv['3'];
 }
+$kk=mysql_query("SELECT Activado FROM login WHERE Login='".$vusuario."'");
+$_SESSION['Activado']=$kk;
+
+mysql_close();
 echo "ok";
 ?>

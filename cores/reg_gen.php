@@ -1,4 +1,5 @@
-<?php
+﻿<?php
+require("class.phpmailer.php");
 $vla = $_GET['key'];
 $vlb = $_GET['id'];
 
@@ -43,8 +44,8 @@ die();
 
 $host="localhost";
 $usuario="paytime";
-$contra="gu5asa8a8";
-$db="zadmin_paytime";
+$contra="contraseña";
+$db="db";
 $conn=mysql_connect($host,$usuario,$contra);
 mysql_select_db("$db",$conn);
 
@@ -73,13 +74,28 @@ mysql_query($query,$conn);
 $query="INSERT into Tiempos (Usuario,Horas,Min,Secs) VALUES ('".$vusuario."',0,0,0)";
 mysql_query($query,$conn);
 
- // Empiezo a generar el mail...
+// Empiezo a generar el mail...
+    $mail= new PHPMailer();
+    $mail->IsSMTP();
+     $mail->SMTPAuth   = true;
+    //$mail->SMTPSecure = "ssl";
+     $mail->Host       = "ligool.com";
+     $mail->Port       = 25;
+    $mail->Username   = 'paytime@ligool.com';
+     $mail->Password   = "22Brayam";
+     //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+     //====== DE QUIEN ES ========
+     $mail->From       = "paytime@ligool.com";
+     $mail->FromName   = "Paytime Ligool";
+     //====== PARA QUIEN =========
+     $mail->Subject    = "Registro Paytime";
+     $mail->AddAddress("$vusuario");
 	$codigohtml = "<html><head><title>Registro Paytime</title></head><body>Gracias por registrarte a Paytime.<br> sigue este link para activar tu cuenta: http://ligool.com/paytime/cores/reg_gen.php?key=$cad&id=$vusuario <br> ";
-	$email = $vusuario;
-	$asunto = 'Registro Paytime';
-	$cabeceras = "From: paytime@ligool.com\r\nContent-type: text/html\r\n";
+	$mail->Body=$codigohtml;
+ $mail->isHTML(true);
 // Envio el email.
-	mail($email,$asunto,$codigohtml,$cabeceras);
+    $mail->Send();
 // Hago el OK de ajax.
+mysql_close();
 echo "ok";
 ?>
