@@ -9,7 +9,7 @@
     <title>Ligool Labs</title>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    
     
     <!-- Bootstrap -->
 
@@ -46,6 +46,7 @@
       }
 
     </style>
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
 
@@ -54,21 +55,21 @@
     <div class="form-signin"> 
       <h2 class="form-signin-heading">Registrate</h2>
       <div class="control-group">
-        <label class="control-label" for="inputEmail">Nombre</label>
+       
         <div class="controls">
-          <input type="text" placeholder="Nombre"  id="nombre" name="nombre">
+          <input type="text" placeholder="Nombre" class="input-block-level"  id="nombre" name="nombre">
         </div>
       </div>
       <div class="control-group">
-        <label class="control-label" for="inputEmail">Email</label>
+        
         <div class="controls">
-          <input type="text" placeholder="Email"  id="email" name="email">
+          <input type="text" placeholder="Email" class="input-block-level" id="email" name="email">
         </div>
       </div>
       <div class="control-group">
-        <label class="control-label" for="inputPassword">Password</label>
+        
         <div class="controls">
-          <input type="password" placeholder="Password"  id="password" name="password">
+          <input type="password" placeholder="Password" class="input-block-level" id="password" name="password">
         </div>
       </div>
 
