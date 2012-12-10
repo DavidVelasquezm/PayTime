@@ -13,7 +13,7 @@
 				</div>
 				<div class="btm_b clearfix">
 					<button class="btn btn-inverse pull-center" type="submit" id="btsub" name="login" value="LogIn">Sign In</button>
-					| <span class="link_reg"><a href="#register">Register</a></span> |
+					| <span class="link_reg"><a href="/register.php">Register</a></span> |
 					<span class="link_reg"><a href="#pass_form">Forgot password?</a></span>
 				</div>  
 </div>
