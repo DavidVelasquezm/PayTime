@@ -49,10 +49,6 @@ die();
       console.log(total)
     }
 
-
-
-
-
     var hora = "0"
     var minuto = "00"
     var segundo = "0"
@@ -123,6 +119,28 @@ die();
 </head>
 <body onLoad="cronometro()">
 <div id="login_div">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">PayTime</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#"> Experimentos</a></li>
+              <li><a href="#about"> Información</a></li>
+              <li><a href="#contact"> Contactenos</a></li>
+              <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
+        Log Out
+      </button></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 <div class="container">
 <div class="row-fluid">
     <div class="span5">
