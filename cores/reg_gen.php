@@ -82,7 +82,7 @@ mysql_query($query,$conn);
      $mail->Host       = "ligool.com";
      $mail->Port       = 25;
     $mail->Username   = 'paytime@ligool.com';
-     $mail->Password   = "22Brayam";
+     $mail->Password   = "password";
      //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
      //====== DE QUIEN ES ========
      $mail->From       = "paytime@ligool.com";
@@ -90,10 +90,14 @@ mysql_query($query,$conn);
      //====== PARA QUIEN =========
      $mail->Subject    = "Registro Paytime";
      $mail->AddAddress("$vusuario");
-	$codigohtml = "<html><head><title>Registro Paytime</title></head><body>Gracias por registrarte a Paytime.<br> sigue este link para activar tu cuenta: http://ligool.com/paytime/cores/reg_gen.php?key=$cad&id=$vusuario <br> ";
-	$mail->Body=$codigohtml;
- $mail->isHTML(true);
-// Envio el email.
+
+	// Incluyo html del mailform ();
+	include('mailform.php');	
+	// Lo adhiero al mail...
+	$mail->Body=$mailcontenido;
+	// Establezco formato HTML.	
+	$mail->isHTML(true);
+	// Envio el email.
     $mail->Send();
 // Hago el OK de ajax.
 mysql_close();
