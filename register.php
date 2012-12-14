@@ -52,10 +52,13 @@
 
     <div id="login_div" name="login_div">
       <div class="container">
-    <div class="form-signin"> 
+    <div class="form-signin" id="formreg" name="formreg"> 
       <h2 class="form-signin-heading">Registrate</h2>
       <div class="control-group">
-       
+               <div class="controls" id="resultado" name="resultado">
+        </div>
+      </div>
+      <div class="control-group">
         <div class="controls">
           <input type="text" placeholder="Nombre" class="input-block-level"  id="nombre" name="nombre">
         </div>
