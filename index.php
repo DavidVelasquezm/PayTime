@@ -24,7 +24,7 @@ $SSegundos = $_SESSION['Segundos'];
 $activado = $_SESSION['Activado'];
 if ($Susuario == TRUE){
 
-if($activado != "Activado"){
+if($activado != 'Activado'){
 echo "Aun no esta activa tu cuenta, verifica tu email para validarla!";
 echo "<a href=\"cores/core_out.php\">Log Out</a>";
 die();
@@ -148,7 +148,7 @@ die();
     <div class="span6">
       <h3>Agrega el costo por hora</h3>
       <form name="valor">
-        <b>Costo por Hora: </b><input class="fontsi" type=text value="10000"  name="costo" size=5>
+        <b>Costo por Hora: </b><input class="fontsi" type=text value="10000" id="costo" name="costo" size=5>
         <br><b>Total: </b><input class="fontsi" type=text value="" disabled name="total" size=5>
       </form>
       <button class="btn" onclick="multiplicar()">ver valor</button>
@@ -163,6 +163,7 @@ die();
         }
         else {
         echo "<br><br><br><div class=\"well\" align=\"center\" id=\"login_div\">";
+	echo "<div id=\"resultado\"></div>";
         include('f_log.php');
         echo "</div>";
         }

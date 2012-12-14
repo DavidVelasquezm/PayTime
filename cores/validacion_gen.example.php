@@ -19,7 +19,7 @@ $vpass=$_POST['da2'];
 if(($vusuario=='')||($vpass==''))
 {
 //Imprimo E1 que es = Campos Vacios :)
-echo '<span class="errrorr">Error: <strong>No puedes Ingresar dejando campos vaciós..</strong></span>';
+echo '<div class="errrorr alert">Error: <strong>No puedes Ingresar dejando campos vacios..</strong></div>';
 die();
 }
 //Si no hay campos continuamos...
@@ -32,7 +32,7 @@ $existencia['usuario']=mysql_num_rows($cont['user']);
 if($existencia['usuario']==0)
 {
 //Usuario No existe..
-echo '<span class="errrorr">Error: <strong>El Usuario Ingresado no existe!</strong></span>';
+echo '<div class="errrorr alert">Error: <strong>El Usuario Ingresado no existe!</strong></div>';
 die();
 }
 
@@ -42,7 +42,7 @@ $existencia['pass']=mysql_num_rows($cont['pass']);
 if($existencia['pass']==0)
 {
 //Usuario No existe..
-echo '<span class="errrorr">Error: <strong>La contraseña ingresada es incorrecta!</strong></span>';
+echo '<div class="errrorr alert">Error: <strong>La contraseña ingresada es incorrecta!</strong></div>';
 die();
 }
 $ok=mysql_query("SELECT * FROM Tiempos WHERE Usuario='".$vusuario."'");
