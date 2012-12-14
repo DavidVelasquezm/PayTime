@@ -100,6 +100,7 @@ $(document).ready(function() {
             }
             else
             {
+		$("formreg").slideUp();
                 $("#formreg").html("<span style='color:#05A62D;'>Se a enviado un email a tu casilla de correo<br>Sigue los pasos para activar tu cuenta.</span>");
                 $("#formreg").slideDown();
 		setTimeout(function(){
