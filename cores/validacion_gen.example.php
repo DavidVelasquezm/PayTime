@@ -58,6 +58,10 @@ $existencia = mysql_num_rows($kk);
 if($existencia != 0){ 
 $_SESSION['Activado']="Activado";
 }
+$querykk=mysql_query("SELECT Nombre FROM login WHERE Login='".$vusuario."'");
+while($avv2=mysql_fetch_array($querykk)){
+$_SESSION['nombre']= $avv2['0'];
+}
 mysql_close();
 echo "ok";
 ?>
