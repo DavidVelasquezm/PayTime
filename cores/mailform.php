@@ -44,10 +44,12 @@ $mailcontenido = "<!DOCTYPE html>
     <div id=\"login_div\" name=\"login_div\">
       <div class=\"container\">
     <div class=\"form-signin\"> 
-      <h2 align=\"center\" class=\"form-signin-heading\">Gracias por Registrarte </h2>
+      <h2 align=\"center\" class=\"form-signin-heading\">Gracias por Registrarte en PayTime </h2>
       <div class=\"control-group\">
 	  <div class=\"controls\">
-	  	Tu codigo de Activacion Es: $cad
+      <p>$vname, Gracias por registrarte en PayTime, esperamos que nuestra herramienta te ayude a 
+      contabilizar tu tiempo, para empezar a utilizarla, solo debes validar tu email.
+	  	<p>Tu codigo de Activacion Es: $cad</p>
       </div>
       </div>
       <div class=\"control-group\">
