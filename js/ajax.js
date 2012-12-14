@@ -19,7 +19,7 @@ $(document).ready(function() {
             {
                 $("#login_div").html("<span style='color:#05A62D;'>Bienvenido de nuevo a Paytime<br>Ahora puedes seguir cobrando tu tiempo.</span>");
                 $("#login_div").slideDown();
-		document.location.href = 'index.php';
+		document.location.href = 'dashboard.php';
                 clearQueue();
             }
             //-------------------------------------
@@ -48,7 +48,7 @@ if (e.keyCode == 13){
             {
                 $("#login_div").html("<span style='color:#05A62D;'>Bienvenido de nuevo a Paytime<br>Ahora puedes seguir cobrando tu tiempo.</span>");
                 $("#login_div").slideDown();
-		document.location.href = 'index.php';
+		document.location.href = 'dashboard.php';
                 clearQueue();
             }
             //-------------------------------------
@@ -78,7 +78,7 @@ if (e.keyCode == 13){
             {
                 $("#login_div").html("<span style='color:#05A62D;'>Bienvenido de nuevo a Paytime<br>Ahora puedes seguir cobrando tu tiempo.</span>");
                 $("#login_div").slideDown();
-		document.location.href = 'index.php';
+		document.location.href = 'dashboard.php';
                 clearQueue();
             }
             //-------------------------------------
@@ -151,12 +151,29 @@ if (e.keyCode == 13){
     /* Guardar Valores... */
     $("#save").click(function(){
         setTimeout(function(){
-            $.post("cores/guardar.php", { da1: $("#rhora").val(), da2: $("#rmin").val(), da3: $("#rsec").val() },
+            $.post("cores/guardar.php", { da1: $("#rhora").val(), da2: $("#rmin").val(), da3: $("#rsec").val(), da4: $("#id").val() },
             function(data){
             //-------*******************************
             if(data!=='ok')
             {
 		alert("Guardado con exito.");
+               clearQueue();
+            }
+            //-------------------------------------
+            });
+        }, 500)
+    });
+
+    /* Guardar Proyecto... */
+    $("#crearp").click(function(){
+        setTimeout(function(){
+            $.post("cores/crearp.php", { da1: $("#nombrep").val()},
+            function(data){
+            //-------*******************************
+            if(data!=='ok')
+            {
+		alert("Guardado con exito.");
+		document.location.href = 'dashboard.php';
                clearQueue();
             }
             //-------------------------------------

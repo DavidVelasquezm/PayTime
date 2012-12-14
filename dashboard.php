@@ -1,3 +1,11 @@
+﻿<?
+@session_start();
+$usuario = $_SESSION['usuario'];
+if($usuario == FALSE){
+die('Debes logear para ver este contenido');
+}
+include('./conex.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -27,8 +35,11 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li ><a href="./">Inicio</a></li>
-              <li class="active"><a href="dashboard.html">Proyectos</a></li>
+              <li class="active"><a href="dashboard.php">Proyectos</a></li>
               <li><a href="#contact"> Contactenos</a></li>
+<li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
+        Log Out
+      </button></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -48,29 +59,31 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  
-                  <td>Ligool</td>
-                  <td>2:30:10</td>
-                  <td><i class="icon-pencil"></i> Editar</td>
-                </tr>
-                <tr>
-                  
-                  <td>PayTime</td>
-                  <td>20:30:10</td>
-                  <td><i class="icon-pencil"></i> Editar</td>
-                </tr>
-                <tr>
-                  
-                  <td>Parchate.co</td>
-                  <td>10:25:30</td>
-                  <td><i class="icon-pencil"></i> Editar</td>
-                </tr>
-                <tr>
+<?
+$usuar = $_SESSION['usuario'];
+$query=mysql_query("SELECT * FROM Tiempos WHERE Usuario='".$usuar."'");
+while($avv=mysql_fetch_array($query)){
+echo "<tr><td>";
+echo $avv['4'];
+echo "</td>";
+echo "<td>"; 
+echo $avv['1'];
+echo ":";
+echo $avv['2'];
+echo ":";
+echo $avv['3'];
+echo "</td>";
+echo "<td><i class=\"icon-pencil\"></i>";
+echo "<a href=\"proyectos.php?id=";
+echo $avv['5'];
+echo "\"> Editar</a></td>";
+echo "</tr>";
+}
+?>
                   
                   <td> </td>
                   <td> </td>
-                  <td><i class="icon-plus"></i> añadir</td>
+                  <td><i class="icon-plus"></i><a href="proyectos.php?add=1"> aÃ±adir</href></td>
                 </tr>
               </tbody>
             </table>
@@ -79,7 +92,11 @@
         <hr class="visible-phone">
         <div class="span3 offset4">
           <h4>Mi Perfil</h4>
+<<<<<<< HEAD:dashboard.html
           <h3> Cristyan Sepulveda <i class="icon-pencil"></i></h3>
+=======
+          <h3> <? echo $_SESSION['nombre']; ?> <i class="icon-pencil"></i></h3>
+>>>>>>> Editar proyectos:dashboard.php
           <img class="img-rounded" src="http://es.gravatar.com/userimage/42947906/69dd99c00ee9ab67d8eae50986cf142c.jpg?size=200">
         </div>  
       </div>
@@ -92,3 +109,6 @@
 <script src="js/ajax.js"></script> 
 </body>
 </html>
+<?
+mysql_close();
+?>

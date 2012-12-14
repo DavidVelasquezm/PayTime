@@ -67,8 +67,8 @@ $fecha = date("d-m-Y H:i:s");
 $query="INSERT into login (Login,Password,RegKey,Nombre,Activado,Fecha) VALUES ('".$vusuario."','".$vpass."','".$cad."','".$vname."','0','".$fecha."')";
 mysql_query($query,$conn);
 
-$query="INSERT into Tiempos (Usuario,Horas,Min,Secs) VALUES ('".$vusuario."',0,0,0)";
-mysql_query($query,$conn);
+//$query="INSERT into Tiempos (Usuario,Horas,Min,Secs) VALUES ('".$vusuario."',0,0,0)";
+//mysql_query($query,$conn);
 
 // Empiezo a generar el mail...
     $mail= new PHPMailer();
