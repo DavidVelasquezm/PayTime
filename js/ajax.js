@@ -19,7 +19,7 @@ $(document).ready(function() {
             {
                 $("#login_div").html("<span style='color:#05A62D;'>Bienvenido de nuevo a Paytime<br>Ahora puedes seguir cobrando tu tiempo.</span>");
                 $("#login_div").slideDown();
-		document.location.href = document.location.href;
+		document.location.href = 'index.php';
                 clearQueue();
             }
             //-------------------------------------
@@ -48,7 +48,7 @@ if (e.keyCode == 13){
             {
                 $("#login_div").html("<span style='color:#05A62D;'>Bienvenido de nuevo a Paytime<br>Ahora puedes seguir cobrando tu tiempo.</span>");
                 $("#login_div").slideDown();
-		document.location.href = document.location.href;
+		document.location.href = 'index.php';
                 clearQueue();
             }
             //-------------------------------------
@@ -78,7 +78,7 @@ if (e.keyCode == 13){
             {
                 $("#login_div").html("<span style='color:#05A62D;'>Bienvenido de nuevo a Paytime<br>Ahora puedes seguir cobrando tu tiempo.</span>");
                 $("#login_div").slideDown();
-		document.location.href = document.location.href;
+		document.location.href = 'index.php';
                 clearQueue();
             }
             //-------------------------------------
@@ -108,13 +108,7 @@ if (e.keyCode == 13){
             else
             {
                 $("#login_div").html("<span style='color:#05A62D;'>Deslogeado Correctamente.</span>");
-                $("#login_div").slideDown();
-		$("#crs").slideUp();
-		setTimeout(function(){
-		$("#login_div").slideUp();
-		$("#login_div").slideDown();
-		}, 3000)
-		document.location.href = document.location.href;
+		document.location.href = 'index.php';
                 clearQueue();
             }
             //-------------------------------------
@@ -122,12 +116,6 @@ if (e.keyCode == 13){
         }, 500)
     });
 
-    $("#resetshow").click(function(){
-$("#login_div").slideUp();
-setTimeout(function(){
-$("#reset_div").slideDown();
-}, 1000)
-});
 
     /* Reset PW */
     $("#btreset").click(function(){

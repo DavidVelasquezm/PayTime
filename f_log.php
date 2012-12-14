@@ -1,4 +1,4 @@
-     				<div class="navbar navbar-inverse navbar-fixed-top">
+﻿     				<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -22,7 +22,7 @@
      				<div class="cnt_b" id="loginfix">
 					<div class="formRow" align="center">
 						<div class="input-prepend">
-							<span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Username" />
+							<span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Email" />
 						</div>
 					</div>
 					<div class="formRow" align"center">
@@ -35,7 +35,7 @@
 				<div class="btm_b clearfix">
 					<button class="btn btn-inverse pull-center" type="submit" id="btsub" name="login" value="LogIn">Sign In</button>
 					| <span class="link_reg"><a href="register.php">Register</a></span> |
-					<span class="link_reg"><a href="#" id="resetshow">Forgot password?</a></span>
+					<span class="link_reg"><a href="reset.php">Forgot password?</a></span>
 				</div>  
 </div>
 <script type="text/javascript">

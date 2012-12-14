@@ -14,8 +14,28 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/custom.css" rel="stylesheet" media="screen">
-    
+    </head>
     <!-- Bootstrap -->
+     				<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">PayTime</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="./">inicio</a></li>
+              <li><a href="register.php">Registrate</a></li>
+              <li><a href="reset.php">Recuperar contraseÃ±a</a></li>
+              <li><a href="#contact">Contactenos</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
 <?php
 $Susuario = $_SESSION['usuario'];
@@ -34,9 +54,9 @@ die();
 ?>
 <script language="JavaScript">
  
-    var valor = 10000
 
     function multiplicar() {
+	valor = document.getElementById("costo").value
     
       vhoras = valor*horag
     
@@ -45,8 +65,9 @@ die();
       vsegundos = (valor*segundog)/3200
     
       total = vhoras+vminutos+vsegundos
+	ntotal = total.toFixed(2);
 
-      document.valor.total.value=total
+      document.valor.total.value=ntotal
     
       console.log(total)
     }
@@ -146,7 +167,7 @@ die();
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="./">Inicio</a></li>
-              <li><a href="#info">Información</a></li>
+              <li><a href="#info">Informacion</a></li>
               <li><a href="#contact"> Contactenos</a></li>
               <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
         Log Out
@@ -183,9 +204,9 @@ die();
       <h3>Agrega el costo por hora</h3>
       <form name="valor">
         <b>Costo por Hora: </b><input class="fontsi" type=text value="10000" id="costo" name="costo" size=5>
-        <br><b>Total: </b><input class="fontsi" type=text value="" disabled name="total" size=5>
+        <br><b>Total: </b><input class="fontsi" type=text value="" disabled name="total" id="totall" size=5>
       </form>
-      <button class="btn" onclick="multiplicar()">ver valor</button>
+      <button class="btn" id="total" onClick="multiplicar()">ver valor</button>
     </div>
 
 </div>
@@ -194,16 +215,11 @@ die();
       <?php
         }
         else {
-        echo "<br><br><br><div class=\"well\" align=\"center\" id=\"login_div\">";
+        echo "<div class=\"well\" align=\"center\" id=\"login_div\">";
 	echo "<div id=\"resultado\"></div>";
         include('f_log.php');
         echo "</div>";
-
-        echo "<div class=\"well\" align=\"center\" id=\"reset_div\" style=\"display:none\">";
-	echo "<div id=\"resultado2\"></div>";
-        include('f_reset.php');
-        echo "</div>";
-        }
+}
       ?> 
 
 
