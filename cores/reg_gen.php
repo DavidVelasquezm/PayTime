@@ -15,7 +15,9 @@ if($existencia['usuario']!=0)
 $query = "UPDATE login SET Activado='1' WHERE Login='".$vlb."' AND RegKey='".$vla."'";
 mysql_query($query, $conn);
 mysql_close();
-die('Cuenta registrada con exito');
+echo 'Cuenta registrada con exito';
+echo "<script type=\"text/javascript\"> setTimeout(\"location.href = '../index.php';\",2000); </script>";
+die();
 }
 else {
 echo "Error:Los datos introducidos son incorrectos";
