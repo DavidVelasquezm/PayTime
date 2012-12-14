@@ -31,7 +31,7 @@ $vname = $_POST['da3'];
 if( $vusuario == FALSE || $vpass == FALSE || $vname == FALSE )
 {
 //Imprimo E1 que es = Campos Vacios :)
-echo '<span class="errrorr alert">Error: <strong>No puedes Ingresar dejando campos vaci�s..</strong></span>';
+echo '<div class="errrorr alert"><strong>Error: </strong>No puedes Ingresar dejando campos vacíos..</div>';
 die();
 }
 
@@ -45,7 +45,7 @@ $existencia['usuario']=mysql_num_rows($cont['user']);
 if($existencia['usuario']!=0)
 {
 //Usuario No existe..
-echo '<span class="errrorr alert">Error: <strong>El Usuario ya esta registrado!!</strong></span>';
+echo '<div class="errrorr alert">Error: <strong>El Usuario ya esta registrado!!</strong></div>';
 die();
 }
 // Registramos el usuario...
