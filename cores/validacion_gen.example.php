@@ -24,12 +24,7 @@ die();
 }
 //Si no hay campos continuamos...
 
-$host="servidor";
-$usuario="usuario";
-$contra="clave";
-$db="database";
-$conn=mysql_connect($host,$usuario,$contra);
-mysql_select_db("$db",$conn);
+include('../conex.php');
 
 $cuserid="SELECT * FROM login WHERE Login='".$vusuario."'";
 $cont['user']=mysql_query($cuserid, $conn);

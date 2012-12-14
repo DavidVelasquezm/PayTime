@@ -5,12 +5,7 @@ $vlb = $_GET['id'];
 
 IF( $vla == TRUE && $vlb == TRUE){
 
-$host="localhost";
-$usuario="usuario";
-$contra="contraseña";
-$db="db";
-$conn=mysql_connect($host,$usuario,$contra);
-mysql_select_db("$db",$conn);
+include('../conex.php');
 
 $cuserid="SELECT * FROM login WHERE Login='".$vlb."' AND RegKey='".$vla."'";
 $cont['user']=mysql_query($cuserid, $conn);
@@ -42,12 +37,7 @@ die();
 
 //Si hay campos continuamos...
 
-$host="localhost";
-$usuario="paytime";
-$contra="contraseña";
-$db="db";
-$conn=mysql_connect($host,$usuario,$contra);
-mysql_select_db("$db",$conn);
+include('../conex.php');
 
 $cuserid="SELECT * FROM login WHERE Login='".$vusuario."'";
 $cont['user']=mysql_query($cuserid, $conn);
