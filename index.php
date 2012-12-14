@@ -22,6 +22,7 @@ $SHoras = $_SESSION['Horas'];
 $SMinutos = $_SESSION['Minutos'];
 $SSegundos = $_SESSION['Segundos'];
 $activado = $_SESSION['Activado'];
+$nombre = $_SESSION['nombre'];
 if ($Susuario == TRUE){
 
 if($activado != 'Activado'){
@@ -144,7 +145,7 @@ die();
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#"> Experimentos</a></li>
-              <li><a href="#about"> Información</a></li>
+              <li><a href="#about"> InformaciÃ³n</a></li>
               <li><a href="#contact"> Contactenos</a></li>
               <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
         Log Out
@@ -157,6 +158,7 @@ die();
 <div class="container">
 <div class="row-fluid">
     <div class="span5">
+	<h2> Bienvenido <? echo $nombre; ?> </h2>
       <h3>Tiempo sin Guardar</h3>
       <form name="cronometro">
         <b>Cronometro: </b><input class="fontsi" type=text value="" disabled name="gratisss" size=5>
@@ -196,7 +198,7 @@ die();
         include('f_log.php');
         echo "</div>";
 
-        echo "<br><br><br><div class=\"well\" align=\"center\" id=\"reset_div\" style=\"display:none\">";
+        echo "<div class=\"well\" align=\"center\" id=\"reset_div\" style=\"display:none\">";
 	echo "<div id=\"resultado2\"></div>";
         include('f_reset.php');
         echo "</div>";
