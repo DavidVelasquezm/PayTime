@@ -182,6 +182,11 @@ die();
 	echo "<div id=\"resultado\"></div>";
         include('f_log.php');
         echo "</div>";
+
+        echo "<br><br><br><div class=\"well\" align=\"center\" id=\"reset_div\" style=\"display:none\">";
+	echo "<div id=\"resultado2\"></div>";
+        include('f_reset.php');
+        echo "</div>";
         }
       ?> 
 

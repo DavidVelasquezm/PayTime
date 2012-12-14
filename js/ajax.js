@@ -122,6 +122,44 @@ if (e.keyCode == 13){
         }, 500)
     });
 
+    $("#resetshow").click(function(){
+$("#login_div").slideUp();
+setTimeout(function(){
+$("#reset_div").slideDown();
+}, 1000)
+});
+
+    /* Reset PW */
+    $("#btreset").click(function(){
+        $("#resultado2").slideUp();
+        setTimeout(function(){
+            $.post("cores/forgot_pw.php", { da1: $("#username22").val() },
+            function(data){
+            //-------*******************************
+            if(data!=='ok')
+            {
+               $("#resultado2").html(data);
+               $("#resultado2").slideDown();
+		setTimeout(function(){
+		$("#resultado2").slideUp();
+		}, 3000)
+               clearQueue();
+            }
+            else
+            {
+		 $("#reset_div").slideUp();
+                $("#reset_div").html("<span style='color:#05A62D;'>Password reseteada correctamente. Te enviamos un e-mail con tus datos nuevos.</span>");
+                $("#reset_div").slideDown();
+		document.location.href = 'index.php';
+                clearQueue();
+            }
+            //-------------------------------------
+            });
+        }, 500)
+    });
+
+
+
     /* Guardar Valores... */
     $("#save").click(function(){
         setTimeout(function(){
