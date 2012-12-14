@@ -146,7 +146,7 @@ die();
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#"> Experimentos</a></li>
-              <li><a href="#about"> InformaciÃ³n</a></li>
+              <li><a href="#forgot">Recuperar contraseña</a></li>
               <li><a href="#contact"> Contactenos</a></li>
               <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
         Log Out
