@@ -54,7 +54,7 @@ $mailcontenido = "<!DOCTYPE html>
       </div>
       <div class=\"control-group\">
         <div class=\"controls\">
-          <p align=\"left\"><a href=\"http://ligool.com/paytime/cores/reg_gen.php?key=$cad&id=$vusuario\">Activar Cuenta</a> http://ligool.com/paytime/cores/reg_gen.php?key=$cad&id=$vusuario
+          <p align=\"left\"><a href=\"http://ligool.com/paytime/cores/reg_gen.php?key=$cad&id=$vusuario\">Activar Cuenta</a>
         </p> 
         </div>
       </div>
