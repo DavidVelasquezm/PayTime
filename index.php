@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Todos los experimentos ||| Ligool Labs">
     <meta name="author" content="Cristyan Sepulveda V">
-    <title>Ligool Labs</title>
+    <title>PayTime | Controla tu Tiempo</title>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
