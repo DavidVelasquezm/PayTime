@@ -35,7 +35,11 @@ echo '<div class="errrorr alert"><strong>Error: </strong>No puedes Ingresar deja
 die();
 }
 
-//Si hay campos continuamos...
+//Si hay campos continuamos... Chekeo si el mail es valido...
+if(!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $vusuario)) {
+    	echo '<div class="errrorr alert">Error: <strong>Debes ingresar un Mail Valido.</strong></div>';
+	die();
+}
 
 include('../conex.php');
 
