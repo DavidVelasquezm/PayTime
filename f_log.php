@@ -11,7 +11,7 @@
             <ul class="nav">
               <li class="active"><a href="./">inicio</a></li>
               <li><a href="register.php">Registrate</a></li>
-              <li><a href="#about">Información</a></li>
+              <li><a href="#forgot">Recuperar contraseña</a></li
               <li><a href="#contact">Contactenos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
