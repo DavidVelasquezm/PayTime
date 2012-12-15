@@ -36,8 +36,9 @@ $nproyecto = $avv['4'];
 }
 ?>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/custom.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    
 <script language="JavaScript">
  
 
