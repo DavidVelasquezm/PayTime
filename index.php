@@ -12,8 +12,8 @@
     <title>PayTime | Controla tu Tiempo</title>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/custom.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     </head>
     <!-- Bootstrap -->
      				<div class="navbar navbar-inverse navbar-fixed-top">
