@@ -1,4 +1,4 @@
-﻿<?
+<?
 @session_start();
 $usuario = $_SESSION['usuario'];
 if($usuario == FALSE){
@@ -63,27 +63,24 @@ include('./conex.php');
 $usuar = $_SESSION['usuario'];
 $query=mysql_query("SELECT * FROM Tiempos WHERE Usuario='".$usuar."'");
 while($avv=mysql_fetch_array($query)){
-echo "<tr><td>";
-echo $avv['4'];
-echo "</td>";
-echo "<td>"; 
-echo $avv['1'];
-echo ":";
-echo $avv['2'];
-echo ":";
-echo $avv['3'];
-echo "</td>";
-echo "<td><i class=\"icon-pencil\"></i>";
-echo "<a href=\"proyectos.php?id=";
-echo $avv['5'];
-echo "\"> Editar</a></td>";
-echo "</tr>";
+
+$nombrep = $avv['4'];
+$horas = $avv['1'];
+$mins = $avv['2'];
+$secs = $avv['3'];
+$id = $avv['5'];
+
+
+echo "<tr><td><a href=\"proyectos.php?id=$id\">$nombrep</a></td>";
+echo "<td>$horas:$mins:$secs</td>";
+echo "<td><i class=\"icon-pencil\"></i><a href=\"proyectos.php?id=$id&edd=1\"> Editar</a></td>";
+echo "<td><a href=\"proyectos.php?id=$id&del=1\">Eliminar </a><td></tr>";
 }
 ?>
                   
                   <td> </td>
                   <td> </td>
-                  <td><i class="icon-plus"></i><a href="proyectos.php?add=1"> aÃ±adir</href></td>
+                  <td><i class="icon-plus"></i><a href="proyectos.php?add=1"> añadir</href></td>
                 </tr>
               </tbody>
             </table>
@@ -92,12 +89,7 @@ echo "</tr>";
         <hr class="visible-phone">
         <div class="span3 offset4">
           <h4>Mi Perfil</h4>
-<<<<<<< HEAD:dashboard.html
-          <h3> Cristyan Sepulveda <i class="icon-pencil"></i></h3>
-=======
           <h3> <? echo $_SESSION['nombre']; ?> <i class="icon-pencil"></i></h3>
->>>>>>> Editar proyectos:dashboard.php
-          <img class="img-rounded" src="http://es.gravatar.com/userimage/42947906/69dd99c00ee9ab67d8eae50986cf142c.jpg?size=200">
         </div>  
       </div>
     </div>  
