@@ -9,7 +9,6 @@
     <title>Ligool Labs</title>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -43,6 +42,7 @@
       }
 
     </style>
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     <script type="text/javascript">
 
   var _gaq = _gaq || [];
