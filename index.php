@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 @session_start();
 ?>
 <!DOCTYPE html>
@@ -16,6 +16,10 @@
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     </head>
     <!-- Bootstrap -->
+<?
+$user = $_SESSION['usuario'];
+IF($user == FALSE){
+?>
      				<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -29,14 +33,16 @@
             <ul class="nav">
               <li class="active"><a href="./">inicio</a></li>
               <li><a href="register.php">Registrate</a></li>
-              <li><a href="reset.php">Recuperar contraseÃ±a</a></li>
+              <li><a href="reset.php">Recuperar contraseña</a></li>
               <li><a href="#contact">Contactenos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-
+<?
+}
+?>
 <?php
 $Susuario = $_SESSION['usuario'];
 $SHoras = $_SESSION['Horas'];
