@@ -193,7 +193,9 @@ if($add == FALSE && $ed == FALSE){
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="js/ajax.js"></script> 
-<script src="js/tiempo.js"></script> 
+<script src="js/tiempo.js"></script>
+</body>
+</html> 
 <?
 mysql_close();
 ?>
