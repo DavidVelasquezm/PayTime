@@ -70,8 +70,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="./">inicio</a></li>
-              <li class="active"><a href="register.php">Registrate</a></li>
-              <li><a href="reset.php">Recuperar contraseña</a></li>
+              <li><a href="register.php">Registrate</a></li>
+              <li class="active"><a href="#reset.php">Recuperar contraseña</a></li>
               <li><a href="#contact">Contactenos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -79,35 +79,24 @@
       </div>
     </div>
 
-    <div id="login_div" name="login_div">
+    <div id="reset_div" name="reset_div">
       <div class="container">
     <div class="form-signin" id="formreg" name="formreg"> 
-      <h2 class="form-signin-heading">Registrate</h2>
+      <h2 class="form-signin-heading">Reset Password</h2>
       <div class="control-group">
-               <div class="controls" id="resultado" name="resultado">
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="controls">
-          <input type="text" placeholder="Nombre" class="input-block-level"  id="nombre" name="nombre">
+               <div class="controls" id="resultado2" name="resultado2">
         </div>
       </div>
       <div class="control-group">
         
         <div class="controls">
-          <input type="text" placeholder="Email" class="input-block-level" id="email" name="email">
+          <input type="text" placeholder="Email" class="input-block-level" id="username22" name="username22">
         </div>
       </div>
       <div class="control-group">
-        
-        <div class="controls">
-          <input type="password" placeholder="Password" class="input-block-level" id="password" name="password">
-        </div>
-      </div>
-
       <div class="control-group">
         <div class="controls">
-          <button type="submit" id="regbtn" name="regbtn" class="btn btn-large btn-primary">Register</button>
+          <button type="submit" id="btreset" name="btreset" class="btn btn-large btn-primary">Reset</button>
         </div>
       </div>
       </div>
@@ -116,4 +105,4 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/ajax.js"></script>
-  </body>
+  </body>     		
