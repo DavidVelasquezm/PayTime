@@ -4,6 +4,7 @@ $user = $_SESSION['usuario'];
 if($user == FALSE) die('Debes logear para ver este contenido');
 $id = $_GET['id'];
 $dd = $_GET['add'];
+$ed = $_GET['edd'];
 if($id == FALSE && $dd == FALSE){
 echo "<script type\"text/javascript\">location.href = 'dashboard.php'</script>";
 die();
@@ -15,11 +16,14 @@ include('./conex.php');
 $kk=mysql_query("SELECT * FROM Tiempos WHERE Usuario='".$user."' AND ID='".$id."'");
 $existencia = mysql_num_rows($kk);
 if($existencia == 0){ 
-die('Este proyecto no te pertenece!');
+echo "Este proyecto no te pertenece!";
+die("<script type=\"text/javascript\"> document.location.href = 'dashboard.php' </script>");
 }
 $del = $_GET['del'];
 
-if($del == TRUE){
+
+
+if($del == TRUE && $ed== FALSE){
 $query="DELETE FROM Tiempos WHERE Usuario='".$user."' AND ID='".$id."'";
 mysql_query($query, $conn);
 echo "Se elimino correctamente tu Proyecto";
@@ -36,9 +40,8 @@ $nproyecto = $avv['4'];
 }
 ?>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="bootstrap/css/custom.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    
+    <link href="bootstrap/css/custom.css" rel="stylesheet" media="screen">
 <script language="JavaScript">
  
 
@@ -124,7 +127,10 @@ $nproyecto = $avv['4'];
       }
       window.setTimeout("cronometro()",1000) 
     }
-    
+	function godash(){
+	document.location.href = 'dashboard.php'
+}    
+
 </script>
 <script type="text/javascript">
 
@@ -167,10 +173,51 @@ $nproyecto = $avv['4'];
 <div class="container">
 <div class="row-fluid">
     <div class="span5">
+<?
+if($ed == TRUE && $add == FALSE){
+$usuar = $_SESSION['usuario'];
+$query=mysql_query("SELECT * FROM Tiempos WHERE Usuario='".$usuar."' AND ID='".$id."'");
+while($avv=mysql_fetch_array($query)){
 
+$horass = $avv['1'];
+$minss = $avv['2'];
+$secss = $avv['3'];
+}
+?>
+      <h2 class="form-signin-heading">Editar <? echo $nproyecto; ?></h2>
+<div class="form">
+      <div class="control-group">
+        <div class="controls">
+          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $nproyecto; ?>" id="nombrepr" name="nombrepr">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $horass; ?>" id="horap" name="horap">
+        </div>
+	</div>
+      <div class="control-group">
+        <div class="controls">
+          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $minss; ?>" id="minp" name="minp">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $secss; ?>" id="secp" name="secp">
+	<input class="fontsi" type="hidden" value="<? echo $id; ?>" disabled name="idp" id="idp" size=5>
+        </div>
+      </div>
+      </div>
+      <div class="control-group">
+          <button type="submit" id="editp" name="editp" class="btn btn-large btn-primary">Editar Proyecto</button>
+</div>
+</div>
+<?
+}
+?>
 <?
 $add = $_GET['add'];
-if($add == TRUE){
+if($add == TRUE && $ed == FALSE){
 ?>
       <h2 class="form-signin-heading">Nuevo Proyecto</h2>
       <div class="control-group">
@@ -179,10 +226,10 @@ if($add == TRUE){
         </div>
       </div>
       <div class="control-group">
-          <button type="submit" id="crearp" name="crearp" class="btn btn-large btn-primary">Crear Proyecto</button>
+          <button type="submit" id="crearp" name="crearp" class="btn btn-large btn-primary">Crear Proyecto</button></div>
 <?
 }
-else{
+if($add == FALSE && $ed == FALSE){
 ?>
 	<h2> Bienvenido a <? echo $nproyecto; ?> </h2>
       <h3>Tiempo sin Guardar</h3>
@@ -216,6 +263,7 @@ else{
 
 </div>
 </div>
+      <button class="btn btn-large btn-primary" id="total" onClick="godash()">Volver a Proyectos</button>
     </div>
 <?
 }
