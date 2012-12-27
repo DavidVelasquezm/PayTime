@@ -86,9 +86,10 @@ echo "<td><a href=\"proyectos.php?id=$id&del=1\">Eliminar </a><td></tr>";
 
         </div>
         <hr class="visible-phone">
-        <div class="span3 offset4">
+        <div class="span3 offset4" id="perfil">
           <h4>Mi Perfil</h4>
           <h3> <? echo $_SESSION['nombre']; ?> <i class="icon-pencil"></i></h3>
+          <img src="img/user.png" alt="">
         </div>  
       </div>
     </div>  
