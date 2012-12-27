@@ -81,7 +81,6 @@ $nproyecto = $avv['4'];
           <a class="brand" href="#">PayTime</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="./">Inicio</a></li>
               <li  class="active"><a href="dashboard.php">Proyectos</a></li>
               <li><a href="#contact"> Contactenos</a></li>
               <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
