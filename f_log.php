@@ -1,22 +1,23 @@
-﻿            <div class="cnt_b" id="loginfix">
-          <div class="formRow" align="center">
-            <div class="input-prepend">
-              <span class="add-on"><i class="icon-user"></i></span><input type="text" id="username" name="username" placeholder="Email" />
-            </div>
-          </div>
-          <div class="formRow" align"center">
-            <div class="input-prepend">
-              <span class="add-on"><i class="icon-lock"></i></span><input type="password" id="password" name="password" placeholder="Password" />
-            </div>
-          </div>
-<br>
+﻿<div class="form-signin" id="">
+          
+<h2 class="form-signin-heading">Login</h2>
+          <div class="control-group">
+        <div class="controls">
+          <input type="text" placeholder="Email" class="input-block-level"  id="username" name="username">
         </div>
+      </div>
+
+          <div class="controls">
+          <input type="password" placeholder="Password" class="input-block-level" id="password" name="password">
+        </div>
+<br>
+       
         <div class="btm_b clearfix">
           <button class="btn btn-inverse pull-center" type="submit" id="btsub" name="login" value="LogIn">Sign In</button>
           | <span class="link_reg"><a href="register.php">Register</a></span> |
           <span class="link_reg"><a href="reset.php">Forgot password?</a></span>
         </div>  
-</div>
+</div> </div>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
