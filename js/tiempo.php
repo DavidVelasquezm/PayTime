@@ -1,3 +1,7 @@
+<?
+@session_start();
+?>
+<script type="text/javascript">
      function multiplicar() {
 	valor = document.getElementById("costo").value
     
@@ -83,3 +87,5 @@
 	function godash(){
 	document.location.href = 'dashboard.php'
 }    
+
+</script>
