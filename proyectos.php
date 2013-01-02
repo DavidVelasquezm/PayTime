@@ -39,7 +39,6 @@ $nproyecto = $avv['4'];
 	}
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -53,7 +52,6 @@ $nproyecto = $avv['4'];
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/custom.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -69,7 +67,6 @@ $nproyecto = $avv['4'];
 </script>
 </head>
 <body onLoad="cronometro()">
-<div id="login_div">
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -91,8 +88,7 @@ $nproyecto = $avv['4'];
         </div>
       </div>
     </div>
-<div class="container">
-    <div class="span5">
+
 <?
 if($ed == TRUE && $add == FALSE){
 $usuar = $_SESSION['usuario'];
@@ -104,7 +100,9 @@ $minss = $avv['2'];
 $secss = $avv['3'];
 }
 ?>
-
+<div class="container">
+  <div class="row">
+    <div class="span5">
 <div class="page-header">
   <h1 style="text-transform:capitalize;"><? echo $nproyecto; ?> <small>editar</small></h1>
 </div>
@@ -136,6 +134,8 @@ $secss = $avv['3'];
           <button type="submit" id="editp" name="editp" class="btn btn-large btn-primary">Editar Proyecto</button>
 </div>
 </div>
+</div>
+
 
 <?
 }
@@ -156,8 +156,8 @@ if($add == TRUE && $ed == FALSE){
 }
 if($add == FALSE && $ed == FALSE){
 ?>
-
-<div class="row">
+<div class="container">
+<div class="row-fluid">
 <div class="span6">
 <div class="page-header">
   <h1 style="text-transform:capitalize">Bienvenido a <? echo $nproyecto; ?><br><small>Tiempo sin Guardar</small></h1>
@@ -182,7 +182,7 @@ if($add == FALSE && $ed == FALSE){
       
     </div>
 
-    <div class="span6">
+    <div class="span4 offset2">
       <h3>Agrega el costo por hora</h3>
       <form name="valor">
         <b>Costo por Hora: </b><input class="fontsi" type=text value="10000" id="costo" name="costo" size=5>
@@ -190,12 +190,11 @@ if($add == FALSE && $ed == FALSE){
       </form>
       <button class="btn" id="total" onClick="multiplicar()">ver valor</button>
     </div>
-
 </div>
 
       <button class="btn btn-large btn-primary" id="total" onClick="godash()">Volver a Proyectos</button>
     </div>
-  </div>
+
 <?
 }
 ?>
