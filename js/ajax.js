@@ -172,7 +172,24 @@ if (e.keyCode == 13){
             //-------*******************************
             if(data!=='ok')
             {
-		alert("Guardado con exito.");
+		alert("Creado con exito.");
+		document.location.href = 'dashboard.php';
+               clearQueue();
+            }
+            //-------------------------------------
+            });
+        }, 500)
+    });
+
+    /* Editar Proyecto... */
+    $("#editp").click(function(){
+        setTimeout(function(){
+            $.post("cores/editp.php", { da1: $("#nombrepr").val(), da2: $("#horap").val(), da3: $("#minp").val(), da4: $("#secp").val(), da5: $("#idp").val() },
+            function(data){
+            //-------*******************************
+            if(data!=='ok')
+            {
+		alert("Editado con exito.");
 		document.location.href = 'dashboard.php';
                clearQueue();
             }
