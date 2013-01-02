@@ -36,6 +36,7 @@ include('./conex.php');
             <ul class="nav">
               <li class="active"><a href="dashboard.php">Proyectos</a></li>
               <li><a href="#contact"> Contactenos</a></li>
+              <li class="visible-phone"><a href="#contact"> Perfil</a></li>
 <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
         Log Out
       </button></li>
@@ -70,7 +71,7 @@ $secs = $avv['3'];
 $id = $avv['5'];
 
 
-echo "<tr><td><a href=\"proyectos.php?id=$id\">$nombrep</a></td>";
+echo "<tr style=\"text-transform:capitalize\"><td><a href=\"proyectos.php?id=$id\">$nombrep</a></td>";
 echo "<td>$horas:$mins:$secs</td>";
 echo "<td><i class=\"icon-pencil\"></i><a href=\"proyectos.php?id=$id&edd=1\"> Editar</a></td>";
 echo "<td><a href=\"proyectos.php?id=$id&del=1\">Eliminar </a><td></tr>";
@@ -85,8 +86,7 @@ echo "<td><a href=\"proyectos.php?id=$id&del=1\">Eliminar </a><td></tr>";
             </table>
 
         </div>
-        <hr class="visible-phone">
-        <div class="span3 offset4" id="perfil">
+        <div class="span3 offset4 hidden-phone" id="perfil">
           <h4>Mi Perfil</h4>
           <h3> <? echo $_SESSION['nombre']; ?> <i class="icon-pencil"></i></h3>
           <img src="img/user.png" alt="">

@@ -92,7 +92,6 @@ $nproyecto = $avv['4'];
       </div>
     </div>
 <div class="container">
-<div class="row-fluid">
     <div class="span5">
 <?
 if($ed == TRUE && $add == FALSE){
@@ -105,26 +104,30 @@ $minss = $avv['2'];
 $secss = $avv['3'];
 }
 ?>
-      <h2 class="form-signin-heading">Editar <? echo $nproyecto; ?></h2>
+
+<div class="page-header">
+  <h1 style="text-transform:capitalize;"><? echo $nproyecto; ?> <small>editar</small></h1>
+</div>
+
 <div class="form">
       <div class="control-group">
         <div class="controls">
-          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $nproyecto; ?>" id="nombrepr" name="nombrepr">
+          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $nproyecto; ?>" id="nombrepr" name="nombrepr">  <strong>Nombre</strong>
         </div>
       </div>
       <div class="control-group">
         <div class="controls">
-          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $horass; ?>" id="horap" name="horap">
+          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $horass; ?>" id="horap" name="horap">  <strong>Horas</strong>
         </div>
 	</div>
       <div class="control-group">
         <div class="controls">
-          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $minss; ?>" id="minp" name="minp">
+          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $minss; ?>" id="minp" name="minp">  <strong>Minutos</strong>
         </div>
       </div>
       <div class="control-group">
         <div class="controls">
-          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $secss; ?>" id="secp" name="secp">
+          <input type="text" placeholder="Nombre" class="input-block-level" value="<? echo $secss; ?>" id="secp" name="secp"> <strong>Segundos</strong>
 	<input class="fontsi" type="hidden" value="<? echo $id; ?>" disabled name="idp" id="idp" size=5>
         </div>
       </div>
@@ -133,6 +136,7 @@ $secss = $avv['3'];
           <button type="submit" id="editp" name="editp" class="btn btn-large btn-primary">Editar Proyecto</button>
 </div>
 </div>
+
 <?
 }
 ?>
@@ -152,8 +156,13 @@ if($add == TRUE && $ed == FALSE){
 }
 if($add == FALSE && $ed == FALSE){
 ?>
-	<h2> Bienvenido a <? echo $nproyecto; ?> </h2>
-      <h3>Tiempo sin Guardar</h3>
+
+<div class="row">
+<div class="span6">
+<div class="page-header">
+  <h1 style="text-transform:capitalize">Bienvenido a <? echo $nproyecto; ?><br><small>Tiempo sin Guardar</small></h1>
+</div>
+
       <form name="cronometro">
         <b>Cronometro: </b><input class="fontsi" type=text value="" disabled name="gratisss" size=5>
       </form>
@@ -183,9 +192,10 @@ if($add == FALSE && $ed == FALSE){
     </div>
 
 </div>
-</div>
+
       <button class="btn btn-large btn-primary" id="total" onClick="godash()">Volver a Proyectos</button>
     </div>
+  </div>
 <?
 }
 ?>
