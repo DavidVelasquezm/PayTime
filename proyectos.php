@@ -1,7 +1,12 @@
 <?
 @session_start();
 $user = $_SESSION['usuario'];
-if($user == FALSE) die('Debes logear para ver este contenido');
+if($user == FALSE){
+echo "Debes logear para ver este contenido";
+sleep(5);
+echo "<script type\"text/javascript\">location.href = 'index.php'</script>";
+die();
+}
 $id = $_GET['id'];
 $dd = $_GET['add'];
 $ed = $_GET['edd'];
