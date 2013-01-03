@@ -204,32 +204,45 @@ if($add == FALSE && $ed == FALSE){
 </div>
 
 <div class="container">
-<div class="row-fluid">
-<div class="span6">
-<div class="page-header">
-  <h1 style="text-transform:capitalize">Bienvenido a: <? echo $nproyecto; ?><br><small>Tiempo sin Guardar</small></h1>
-</div>
-
+  <div class="row-fluid">
+    <div class="span6">
+      <div class="page-header"><h1 style="text-transform:capitalize">Bienvenido a: <? echo $nproyecto; ?><br><small>Tiempo sin Guardar</small></h1></div>
       <form name="cronometro">
-        <b>Cronometro: </b><input class="fontsi" type=text value="" disabled name="gratisss" size=5>
+        <div class="row-fluid">
+          <div class="span3 offset2">
+           <h4>Cronometro:</h4>
+          </div>
+          <div class="span4 pull-right">
+            <input class="fontsi" type=text value="" disabled name="gratisss" size=5>
+          </div>
+        </div>
       </form>
-<input class="fontsi" type="hidden" value="" disabled name="rhora" id="rhora" size=5>
-<input class="fontsi" type="hidden" value="" disabled name="rmin" id="rmin" size=5>
-<input class="fontsi" type="hidden" value="" disabled name="rsec" id="rsec" size=5>
-<input class="fontsi" type="hidden" value="<? echo $id; ?>" disabled name="id" id="id" size=5>
-
-      <button class="btn" id="save" name="save" onclick="tiempo()">
-        Guardar
-      </button>
-      <br>
+      <input class="fontsi" type="hidden" value="" disabled name="rhora" id="rhora" size=5>
+      <input class="fontsi" type="hidden" value="" disabled name="rmin" id="rmin" size=5>
+      <input class="fontsi" type="hidden" value="" disabled name="rsec" id="rsec" size=5>
+      <input class="fontsi" type="hidden" value="<? echo $id; ?>" disabled name="id" id="id" size=5>
+      <div class="row-fluid">
+        <div class="span4 pull-right">
+          <button class="btn" id="save" name="save" onclick="tiempo()">
+            Guardar
+          </button>
+        </div>
+      </div>
+      <hr>
       <h3>tiempo acumulado</h3>
       <form name="tablatiempo">
-        <b>Total:</b> <input class="fontsi" type=text name="ttotal" disabled size=5 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
+        <div class="row-fluid">
+          <div class="span3 offset2">
+            <h4>Total:</h4>
+          </div>
+          <div class="span4 pull-right">
+            <input class="fontsi" type=text name="ttotal" disabled size=5 <? echo "value=\"$SHoras:$SMinutos:$SSegundos\""; ?> >
+          </div>
+        </div>
       </form>
-      
     </div>
-
-    <div class="span4 offset2">
+  
+    <div class="span4 pull-right">
       <h3>Agrega el costo por hora</h3>
       <form name="valor">
         <b>Costo por Hora: </b><input class="fontsi" type=text value="10000" id="costo" name="costo" size=5>
@@ -237,10 +250,11 @@ if($add == FALSE && $ed == FALSE){
       </form>
       <button class="btn" id="total" onClick="multiplicar()">ver valor</button>
     </div>
+  </div>
+  <br>
+  <hr class="visible-phone">
+  <button class="btn btn-large btn-primary pull-right span4" id="total" onClick="godash()">Volver a Proyectos</button>
 </div>
-
-      <button class="btn btn-large btn-primary" id="total" onClick="godash()">Volver a Proyectos</button>
-    </div>
 
 <?
 }
