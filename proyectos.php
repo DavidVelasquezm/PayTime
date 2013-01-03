@@ -207,7 +207,7 @@ if($add == FALSE && $ed == FALSE){
 <div class="row-fluid">
 <div class="span6">
 <div class="page-header">
-  <h1 style="text-transform:capitalize">Bienvenido a <? echo $nproyecto; ?><br><small>Tiempo sin Guardar</small></h1>
+  <h1 style="text-transform:capitalize">Bienvenido a: <? echo $nproyecto; ?><br><small>Tiempo sin Guardar</small></h1>
 </div>
 
       <form name="cronometro">
