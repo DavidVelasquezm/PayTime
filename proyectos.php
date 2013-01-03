@@ -223,7 +223,7 @@ if($add == FALSE && $ed == FALSE){
       <input class="fontsi" type="hidden" value="<? echo $id; ?>" disabled name="id" id="id" size=5>
       <div class="row-fluid">
         <div class="span4 pull-right">
-          <button class="btn" id="save" name="save" onclick="tiempo()">
+          <button class="btn btn-inverse" id="save" name="save" onclick="tiempo()">
             Guardar
           </button>
         </div>
@@ -241,14 +241,33 @@ if($add == FALSE && $ed == FALSE){
         </div>
       </form>
     </div>
-  
-    <div class="span4 pull-right">
+  <hr class="visible-phone">
+    <div class="span4 hero-unit pull-right">
       <h3>Agrega el costo por hora</h3>
       <form name="valor">
-        <b>Costo por Hora: </b><input class="fontsi" type=text value="10000" id="costo" name="costo" size=5>
-        <br><b>Total: </b><input class="fontsi" type=text value="" disabled name="total" id="totall" size=5>
+        <div class="row-fluid">
+          <div class="span6">
+            <h4>Costo por Hora:</h4>
+          </div>
+          <div class="span4">
+            <input class="fontsi" type=text value="10000" id="costo" name="costo" size=5>
+          </div>
+        </div>
+        <br>
+        <div class="row-fluid">
+          <div class="span6">
+            <h4>Total:</h4>
+          </div>
+          <div class="span6">
+            <input class="fontsi" type=text value=""  name="total" id="totall" size=5>
+          </div>
+        </div>
       </form>
-      <button class="btn" id="total" onClick="multiplicar()">ver valor</button>
+      <div class="row-fluid">
+        <div class="span6 offset6">
+          <button class="btn btn-inverse" id="total" onClick="multiplicar()">ver valor</button>
+        </div>
+      </div>
     </div>
   </div>
   <br>
