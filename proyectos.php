@@ -105,6 +105,20 @@ $minss = $avv['2'];
 $secss = $avv['3'];
 }
 ?>
+
+<div class="modal hide fade" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" aria-hidden="true"><a href="dashboard.php">&times;</a></button>
+    <h3>Cambios Guardados</h3>
+  </div>
+  <div class="modal-body">
+    <p>Los Cambios fueron guardados con éxito</p>
+  </div>
+  <div class="modal-footer">
+    <a href="dashboard.php" class="btn btn-primary">Volver a Mis Proyectos</a>
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="span5">
@@ -149,6 +163,20 @@ $secss = $avv['3'];
 $add = $_GET['add'];
 if($add == TRUE && $ed == FALSE){
 ?>
+
+<div class="modal hide fade" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" aria-hidden="true"><a href="dashboard.php">&times;</a></button>
+    <h3>Crear nuevo proyecto</h3>
+  </div>
+  <div class="modal-body">
+    <p>Su nuevo proyecto fue creado con éxito</p>
+  </div>
+  <div class="modal-footer">
+    <a href="dashboard.php" class="btn btn-primary">Volver a Mis Proyectos</a>
+  </div>
+</div>
+
       <h2 class="form-signin-heading">Nuevo Proyecto</h2>
       <div class="control-group">
         <div class="controls">

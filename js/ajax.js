@@ -172,8 +172,7 @@ if (e.keyCode == 13){
             //-------*******************************
             if(data!=='ok')
             {
-		alert("Creado con exito.");
-		document.location.href = 'dashboard.php';
+		$('#myModal').modal('show')
                clearQueue();
             }
             //-------------------------------------
@@ -189,8 +188,8 @@ if (e.keyCode == 13){
             //-------*******************************
             if(data!=='ok')
             {
-		alert("Editado con exito.");
-		document.location.href = 'dashboard.php';
+        $('#myModal').modal('show')
+		
                clearQueue();
             }
             //-------------------------------------

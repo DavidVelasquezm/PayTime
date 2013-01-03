@@ -95,10 +95,10 @@ echo "<td><a href=\"proyectos.php?id=$id&del=1\">Eliminar </a><td></tr>";
     </div>  
 
 
-    <!-- loaders -->
+<!-- loaders -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
-<script src="js/ajax.js"></script> 
+<script src="js/ajax.js"></script>
 </body>
 </html>
 <?
