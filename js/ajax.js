@@ -156,7 +156,7 @@ if (e.keyCode == 13){
             //-------*******************************
             if(data!=='ok')
             {
-		alert("Guardado con exito.");
+		$('#myModal').modal('show')
                clearQueue();
             }
             //-------------------------------------

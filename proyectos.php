@@ -189,6 +189,20 @@ if($add == TRUE && $ed == FALSE){
 }
 if($add == FALSE && $ed == FALSE){
 ?>
+
+<div class="modal hide fade" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Tiempo Guardado</h3>
+  </div>
+  <div class="modal-body">
+    <p>El tiempo acumulado fue guardado con exito</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal">Entendido</button>
+  </div>
+</div>
+
 <div class="container">
 <div class="row-fluid">
 <div class="span6">
