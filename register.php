@@ -1,3 +1,10 @@
+<?
+@session_start();
+$user = $_SESSION['nombre'];
+IF($user == TRUE){
+die('<script type="text/javascript">location.href = "dashboard.php"</script>');
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>

@@ -1,9 +1,5 @@
-<?
+<?php
 @session_start();
-$user = $_SESSION['nombre'];
-IF($user == TRUE){
-die('<script type="text/javascript">location.href = "dashboard.php"</script>');
-}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,9 +9,10 @@ die('<script type="text/javascript">location.href = "dashboard.php"</script>');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Todos los experimentos ||| Ligool Labs">
     <meta name="author" content="Cristyan Sepulveda V">
-    <title>Ligool Labs</title>
+    <title>PayTime | Controla tu Tiempo</title>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -24,8 +21,8 @@ die('<script type="text/javascript">location.href = "dashboard.php"</script>');
       }
 
       .form-signin {
-        max-width: 300px;
-        padding: 19px 29px 29px;
+        max-width: 273px;
+        padding: 40px 40px 29px;
         margin: 0 auto 20px;
         background-color: #fff;
         border: 1px solid #e5e5e5;
@@ -63,9 +60,14 @@ die('<script type="text/javascript">location.href = "dashboard.php"</script>');
   })();
 
 </script>
-  </head>
-  <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    </head>
+    <!-- Bootstrap -->
+<?
+$user = $_SESSION['usuario'];
+IF($user == FALSE){
+?>
+     				<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -76,40 +78,91 @@ die('<script type="text/javascript">location.href = "dashboard.php"</script>');
           <a class="brand" href="#">PayTime</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="./">inicio</a></li>
+              <li class="active"><a href="./">inicio</a></li>
               <li><a href="register.php">Registrate</a></li>
-              <li class="active"><a href="#reset.php">Recuperar contraseña</a></li>
+              <li><a href="reset.php">Recuperar contraseña</a></li>
               <li><a href="#contact">Contactenos</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
+<?
+}
+?>
+<?php
+$Susuario = $_SESSION['usuario'];
+$SHoras = $_SESSION['Horas'];
+$SMinutos = $_SESSION['Minutos'];
+$SSegundos = $_SESSION['Segundos'];
+$activado = $_SESSION['Activado'];
+$nombre = $_SESSION['nombre'];
+if ($Susuario == TRUE){
 
-    <div id="reset_div" name="reset_div">
-      <div class="container">
-    <div class="form-signin" id="formreg" name="formreg"> 
-      <h2 class="form-signin-heading">Reset Password</h2>
-      <div class="control-group">
-               <div class="controls" id="resultado2" name="resultado2">
+if($activado != 'Activado'){
+echo "Aun no esta activa tu cuenta, verifica tu email para validarla!";
+echo "<a href=\"cores/core_out.php\">Log Out</a>";
+die();
+}
+
+//echo "<script type=\"text/javascript\">location.href='dashboard.php'</script>";
+//die();
+?>
+
+<body>
+<div id="login_div">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">PayTime</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="./">Inicio</a></li>
+              <li><a href="dashboard.php">Proyectos</a></li>
+              <li><a href="#contact"> Contactenos</a></li>
+              <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
+        Log Out
+      </button></li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
-      </div>
-      <div class="control-group">
-        
-        <div class="controls">
-          <input type="text" placeholder="Email" class="input-block-level" id="username22" name="username22">
-        </div>
-      </div>
-      <div class="control-group">
-      <div class="control-group">
-        <div class="controls">
-          <button type="submit" id="btreset" name="btreset" class="btn btn-large btn-primary">Reset</button>
-        </div>
-      </div>
-      </div>
       </div>
     </div>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/ajax.js"></script>
-  </body>         
+<div class="container">
+<div class="row-fluid">
+    <div class="span5">
+	<h2> Bienvenido <? echo $nombre; ?> </h2>
+
+    
+</div>
+</div>
+</div>
+    </div>
+      <?php
+        }
+        else {
+        echo "<div  id=\"login_div\">";
+	echo "<div id=\"resultado\"></div>";
+        include('f_log.php');
+        echo "</div>";
+}
+      ?> 
+
+
+
+
+ 
+
+
+<!-- loaders -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/ajax.js"></script> 
+
+</body>
+</html>

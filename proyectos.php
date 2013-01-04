@@ -45,18 +45,20 @@ $nproyecto = $avv['4'];
 }
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app>
   <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Todos los experimentos ||| Ligool Labs">
     <meta name="author" content="Cristyan Sepulveda V">
-    <title>PayTime | Controla tu Tiempo</title>
+    <title><? echo $nproyecto; ?> | Paytime</title>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/custom.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -83,8 +85,9 @@ $nproyecto = $avv['4'];
           <a class="brand" href="#">PayTime</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li  class="active"><a href="dashboard.php">Proyectos</a></li>
-              <li><a href="#contact"> Contactenos</a></li>
+              <li><a href="./">Inicio</a></li>
+              <li><a href="dashboard.php">Proyectos</a></li>
+              <li class="active"><a href="#"><? echo $nproyecto; ?></a></li>
               <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
         Log Out
       </button></li>
@@ -163,7 +166,7 @@ $secss = $avv['3'];
 $add = $_GET['add'];
 if($add == TRUE && $ed == FALSE){
 ?>
-
+<div class="container">
 <div class="modal hide fade" id="myModal">
   <div class="modal-header">
     <button type="button" class="close" aria-hidden="true"><a href="dashboard.php">&times;</a></button>
@@ -177,14 +180,15 @@ if($add == TRUE && $ed == FALSE){
   </div>
 </div>
 
-      <h2 class="form-signin-heading">Nuevo Proyecto</h2>
+      <div class="page-header"><h1 style="text-transform:capitalize">{{proyecto}} <small>crear</small></h1></div>
       <div class="control-group">
         <div class="controls">
-          <input type="text" placeholder="Nombre" class="input-block-level"  id="nombrep" name="nombrep">
+          <input type="text" placeholder="Nombre" ng-model="proyecto" class="input-block-level"  id="nombrep" name="nombrep">
         </div>
       </div>
       <div class="control-group">
-          <button type="submit" id="crearp" name="crearp" class="btn btn-large btn-primary">Crear Proyecto</button></div>
+          <button type="submit" id="crearp" name="crearp" class="btn btn-large btn-primary">Crear {{proyecto}} </button></div>
+          </div>
 <?
 }
 if($add == FALSE && $ed == FALSE){

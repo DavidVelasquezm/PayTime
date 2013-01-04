@@ -21,6 +21,19 @@ include('./conex.php');
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
     
     <!-- Bootstrap -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37046874-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
@@ -34,8 +47,9 @@ include('./conex.php');
           <a class="brand" href="#">PayTime</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
+              <li><a href="./">Inicio</a></li>
               <li class="active"><a href="dashboard.php">Proyectos</a></li>
-              <li><a href="#contact"> Contactenos</a></li>
+              
               <li class="visible-phone"><a href="#contact"> Perfil</a></li>
 <li><button class="btn pull-center" type="submit" id="btloff" name="login" value="Logout">
         Log Out
