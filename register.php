@@ -122,5 +122,7 @@ die('<script type="text/javascript">location.href = "dashboard.php"</script>');
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/live_Validation.js"></script>
+    <script src="js/stanalone_livevalidation.js"></script>
     <script src="js/ajax.js"></script>
   </body>
